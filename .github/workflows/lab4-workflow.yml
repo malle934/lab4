@@ -14,12 +14,10 @@ jobs:
       steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
-
-        - name: install nodejs
-          uses: actions/setup-node@v4
+        - uses: actions/setup-node@v4     #added
           with:
-            version: 20.x
-            registry-url: 'https://npm.pkg.github.com/'
+            node-version: '20.x'
+            registry-url: 'https://npm.pkg.github.com/' 
         
         - name: install dependecies
           run: npm install
